@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Mivinguy/fillout_server/issues"
   },
-  "homepage": "https://github.com/Mivinguy/fillout_server#readme"
+  "homepage": "https://github.com/Mivinguy/fillout_server#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "express": "^4.17.1"
+  }
 }
