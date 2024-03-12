@@ -102,12 +102,12 @@ app.get('/:formId/filteredResponses', async (req, res) => {
         });
 
         const totalResponses = filteredResponses.length;
-        const pageCount = Math.ceil(totalResponses / 150);
+        const pageCount = Math.ceil(totalResponses / (limit ?? 150));
 
         res.json({
             responses: filteredResponses,
-            totalResponses,
-            pageCount
+            totalResponses: totalResponses,
+            pageCount: pageCount
         });
     } catch (error) {
         console.error('Error fetching responses:', error.response ? error.response.data : error.message);
